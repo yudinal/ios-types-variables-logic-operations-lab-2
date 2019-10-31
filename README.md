@@ -21,22 +21,16 @@ var grade2 = 9.0
 var grade3 = 5.0
 
 // your code here
-```
-Answer:
-var grade1 = 7.0
-var grade2 = 9.0
-var grade3 = 5.0
-var yourGrade = 8.0
-var averageGrade = (grade1 + grade2 + grade3) / 3.0
-print(averageGrade)
 
-if yourGrade < averageGrade {
-print("below average")
-} else if yourGrade > averageGrade {
-print("above average")
+var yourGrade = 8.0
+let gradeAverage = (grade1 + grade2 + grade3) / 3
+if yourGrade > gradeAverage {
+    print("above average")
 } else {
-print(yourGrade)
+    print("below average")
 }
+
+```
 
 ***
 ## Question 2
@@ -47,13 +41,14 @@ You are given a number. Print even if the number is even or odd otherwise.
 let number = 2
 
 // your code here
-```
-Answer:
+
 if number % 2 == 0 {
 print("even")
 } else if number % 2 != 0 {
 print("odd")
 }
+```
+
 ***
 ## Question 3
 
@@ -64,14 +59,13 @@ var a = 12
 var b = 3
 
 // code here
-```
-Answer:
+
 if a % b == 0 {
 print("divisible")
 } else if a % b != 0 {
 print(" not divisible")
 }
-
+```
 
 ***
 ## Question 4
@@ -84,8 +78,13 @@ var b = 3
 var c = 2
 
 // your code here
+
+if a == b || b == c || c == a {
+print("At least two variables have the same value")
+} else {
+print("All the values are different")
+}
 ```
-Answer:
 
 
 ***
@@ -98,6 +97,16 @@ var baconAge = 6 // the bacon is 6 days old
 var eggsAge = 12 // eggs are 12 days old
 
 // your code here
+
+if baconAge > 6 && eggsAge > 20 {
+print("throw out")
+} else if baconAge >= 7 {
+print("throw out" + "bacon")
+} else if eggsAge >= 21 {
+print("throw out" + "eggs")
+} else {
+print("you can cook bacon and eggs")
+}
 ```
 
 ***
@@ -110,6 +119,12 @@ The above rule is valid except that every 100 years special rules apply. Years t
 let year = 2014
 
 // your code here
+
+if (year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0){
+print("Leap year!")
+ } else {
+print("Not leap year!")
+ }
 ```
 
 ***
@@ -121,6 +136,18 @@ If you use `random()` it will give you a random number within a specified range.
 let randomNum = Int.random(in: 0...100)
 
 // your code here
+
+var coinToss = Bool.random()
+var tails = Int.random(in: 0...50)
+var heads = Int.random(in: 51...100)
+if randomNum == tails {
+    coinToss == true
+    print(tails)
+} else {
+    randomNum == heads
+    coinToss == false
+    print(heads)
+}
 ```
 
 Hint: use an if/else block along with the `%` operator
@@ -137,6 +164,8 @@ var c = 3
 var d = 4
 
 // your code here
+var array = [a, b, c, d]
+print(array.min()!)
 ```
 
 ***
@@ -150,7 +179,9 @@ b. !(3 > 3)
 c. !(true || false)
 d. (4 < 3 || 4 > 3) && ("Message: " == "Message: ")
 e. !(3 != 3)
-
+ 
+ Answer:
+ All of them
 ```
 
 ***
@@ -166,11 +197,13 @@ Given the below, which of the following expressions evaluate to true?
 
 ```swift
 a. x && y
-b. x || y || z == 1
-c. ("five" == "5" || "FIVE" == "five" || 5 == 3 + 2) && !y
+b. x || y || z == 1 // true
+c. ("five" == "5" || "FIVE" == "five" || 5 == 3 + 2) && !y //true
 d. (x && y) || z > 6
 e. !(z < 6) && !y && !x
-
+ 
+ Answer:
+ b. c. are true
 ```
 
 
@@ -185,6 +218,8 @@ b. The maximum value for Integers is +∞.
 c. Integer types in computers take up a fixed amount of memory.
 d. Integers may contain decimals.
 
+Answer:
+c. d.
 ```
 
 
@@ -198,7 +233,9 @@ a. let numberOfPages: Int = 500
 b. let numberOfChapters = "For Whom The Bell Tolls"
 c. let nameOfBook: Int = 14
 d. let yearPublished = "Nineteen-thirty-five"
-
+ 
+ Answer:
+ All of them compile
 ```
 
 ***
@@ -220,6 +257,8 @@ b %= c
 
 print(a + b + c)
 
+Answer:
+30
 ```
 
 ***
@@ -236,6 +275,10 @@ let isEqual = div == div2
 
 3. The value of isEqual is_____________________ (or write "isEqual will not compile")
 
+Answwer:
+1. 2
+2. 2.75
+3. isEqual will not compile
 
 ```
 ***
@@ -252,6 +295,9 @@ a. n is a Float
 b. n is a Double
 c. n is a Decimal
 d. In is an Int
+
+Answer:
+b., c.
 
 ```
 
